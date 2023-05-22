@@ -1,30 +1,37 @@
-def binary_search_dictionary(kata, kamus):
+def binary_search(dictionary, word):
     left = 0
-    right = len(kamus) - 1
+    right = len(dictionary) - 1
 
     while left <= right:
         mid = (left + right) // 2
+        entry = dictionary[mid]
 
-        if kamus[mid][0] == kata:
-            # Kata ditemukan dalam kamus, mengembalikan definisi
-            return kamus[mid][1]
-
-        if kamus[mid][0] < kata:
+        if entry[0] == word:
+            return entry[1]
+        elif entry[0] < word:
             left = mid + 1
         else:
             right = mid - 1
 
-    # Kata tidak ditemukan dalam kamus
-    return None
+    return "Kata tidak ditemukan dalam kamus ajaib."
 
 # Kamus ajaib
-kamus = [
-    ["Apple", "Buah Apel"],
-    ["Banana", "Buah Pisang"],
-    ["Cat", "Kucing"],
-    ["Duck", "Bebek"],
-    ["Elephant", "Gajah"]
+dictionary = [
+    ("Apple", "Buah Apel"),
+    ("Banana", "Buah Pisang"),
+    ("Cat", "Kucing"),
+    ("Duck", "Bebek"),
+    ("Elephant", "Gajah")
 ]
+
+# Meminta input kata yang ingin dicari definisinya
+word = input("Masukkan kata yang ingin Anda cari definisinya: ")
+
+# Mencari definisi kata menggunakan binary search
+definition = binary_search(dictionary, word)
+
+# Menampilkan hasil
+print("Definisi kata", word, "adalah:", definition)
 
 # Kata yang ingin dicari definisinya
 kata_cari = "Banana"
