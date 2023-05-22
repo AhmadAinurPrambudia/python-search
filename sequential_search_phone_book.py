@@ -1,21 +1,23 @@
-def sequential_search(nama, daftar_nama, daftar_nomor):
-    for i in range(len(daftar_nama)):
-        if daftar_nama[i] == nama:
-            return daftar_nomor[i]
-    return None
+def sequential_search(phonebook, name):
+    for entry in phonebook:
+        if entry[0] == name:
+            return entry[1]
+    
+    return "Nomor telepon tidak ditemukan."
 
-# Daftar nama dan nomor telepon
-daftar_nama = ["John Doe", "Jane Smith", "Michael Johnson", "Emily Davis"]
-daftar_nomor = ["081234567890", "089876543210", "087811223344", "082122232425"]
+# Buku telepon
+phonebook = [
+    ("John Doe", "081234567890"),
+    ("Jane Smith", "089876543210"),
+    ("Michael Johnson", "087811223344"),
+    ("Emily Davis", "082122232425")
+]
 
-# Nama yang ingin dicari nomor teleponnya
-nama_cari = "Jane Smith"
+# Meminta input nama yang ingin dicari nomor teleponnya
+name = input("Masukkan nama yang ingin Anda cari nomor teleponnya: ")
 
 # Mencari nomor telepon menggunakan sequential search
-nomor_telepon = sequential_search(nama_cari, daftar_nama, daftar_nomor)
+number = sequential_search(phonebook, name)
 
 # Menampilkan hasil
-if nomor_telepon:
-    print("Nomor telepon", nama_cari, "adalah:", nomor_telepon)
-else:
-    print("Nomor telepon", nama_cari, "tidak ditemukan.")
+print("Nomor telepon", name, "adalah:", number)
