@@ -1,1 +1,5 @@
 # python-search
+
+1# Binary merujuk pada operasi atau mode akses data yang melibatkan file biner atau data yang disimpan dalam format biner. Pada operasi biner, data dianggap sebagai serangkaian bit, di mana setiap bit dapat mewakili nilai 0 atau 1. Dalam Python, Anda dapat menggunakan fungsi built-in seperti open() dengan mode 'rb' (read binary) atau 'wb' (write binary) untuk membaca dan menulis data biner. Ini berguna ketika Anda perlu membaca atau menulis data dalam format yang tidak dapat diinterpretasikan langsung sebagai teks biasa, seperti file gambar, audio, atau data mentah lainnya.
+
+2#Sequential merujuk pada operasi atau mode akses data yang dilakukan secara berurutan atau sekuensial. Ini berarti Anda membaca atau menulis data dalam urutan yang ditentukan, satu elemen setelah yang lain. Dalam Python, ini adalah metode default untuk membaca dan menulis file teks. Anda dapat menggunakan fungsi open() dengan mode 'r' (read) atau 'w' (write) untuk membaca atau menulis file secara berurutan. Operasi sekuensial berguna ketika Anda ingin mengakses data dalam format teks atau membaca/menulis data baris per baris.
